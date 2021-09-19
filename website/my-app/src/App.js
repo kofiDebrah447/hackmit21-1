@@ -1,20 +1,37 @@
-import textbookImage from './images/textbookclipart.png';
 import './App.css';
-import About from './About.js';
-import HomeImage from './HomeImage.js';
-
+import * as ReactBootStrap from "react-bootstrap";
+import Books from "./component/Books";
+import NavBar from "./component/NavBar"
+import Home from "./component/Home"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
   return (
     <div class = "App">
-      <div id = "logo">
-    <h1 id = "header">book exchange</h1>
-    <img id = "clipart" src = {textbookImage} />
-    </div>
     
-    <HomeImage/>
-    <About/> 
+    <Router>
+      <NavBar />
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/Books" component={Books}>
+            <Books />
+          </Route>
+          <Route exact path="/" component={Home}>
+            <Home />
+          </Route>
+          <Route path="/idek">
+            <Books />
+          </Route>
+        </Switch>
+    </Router>
     </div>
   );
 }
