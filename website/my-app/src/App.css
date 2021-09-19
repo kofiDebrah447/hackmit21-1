@@ -1,38 +1,44 @@
-.App {
+#header {
+  text-align: left;
+  padding: 10px;
+  margin-left: 50px;
+
+}
+
+#logo {
+  display: flex;
+
+}
+
+#clipart {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+}
+
+
+#about {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homeImage {
+  background-image: url(./images/standardizedTestBook.jpeg);
+  background-attachment: fixed ;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#divHeader {
+  text-align: right;
+  padding: 40px;
+  font-size: 75px;
+  background-color: aliceblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#subheader {
+  text-align: right;
+  padding: 30px;
+  background-color: antiquewhite;
 }
